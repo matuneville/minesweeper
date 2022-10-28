@@ -1,0 +1,3 @@
+C:/Users/nevil/Documents/GitHub/intentoDeMinesweeperPosta/cmake-build-debug/CMakeFiles/tpi.dir
+C:/Users/nevil/Documents/GitHub/intentoDeMinesweeperPosta/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/nevil/Documents/GitHub/intentoDeMinesweeperPosta/cmake-build-debug/CMakeFiles/rebuild_cache.dir
