@@ -1,5 +1,5 @@
 # Minesweeper 💣💥  
-Starting from a group practice project for university in which we had to program the structural base of the minesweeper game, mainly coded with arrays (vectors) and matrices, 
+Starting from a group [practice project](https://github.com/matuneville/uba-algo1-TPs) for university in which we had to program the structural base of the minesweeper game, mainly coded with arrays (vectors) and matrices, 
 I managed to program this simple graphical interface to play the game in the console, so that anyone can try it. Everithing is coded in C++ with CLion IDE. Group members are mentioned at the bottom.
 
 ## Game working
