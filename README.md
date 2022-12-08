@@ -18,6 +18,9 @@ And thus, you can win or lose the match.
   
 <img src="https://github.com/matuneville/minesweeper/blob/main/gamepics/won1.jpg"  width="450" height="450"> <img src="https://github.com/matuneville/minesweeper/blob/main/gamepics/lost1.jpg"  width="450" height="450">   
 
+## Testing
+The Test folder includes test suites made using the Google Test libraries. All cases of game situations has been put to the test to check the correctness of the algorithms. There is an extra algorithm that wasn't incorporated in the game, which recommends the player an empty cell to be played when a straight pattern of 1-2-1 is displayed on the board. 
+
 ## Authors
 - [@matuneville](https://www.github.com/matuneville)
 - [@Matteeo8](https://www.github.com/Matteeo8)
