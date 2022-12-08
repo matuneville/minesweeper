@@ -1,0 +1,562 @@
+        -:    0:Source:C:/Users/nevil/Documents/GitHub/uba-algo1-TPs/TP2/ResolucionTP2/template-alumnos/auxiliares.cpp
+        -:    0:Graph:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\auxiliares.gcno
+        -:    0:Data:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\auxiliares.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones auxiliares
+        -:    3:// que ustedes necesiten implementar. Tienen que coincidir con las 
+        -:    4:// declaraciones de auxiliares.h
+        -:    5://
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+function _Z13estaEnTableroSt4pairIiiERSt6vectorIS1_IbSaIbEESaIS3_EE called 633 returned 100% blocks executed 100%
+      633:   15:bool estaEnTablero (pos p, tablero &t){
+      633:   16:    return (p.first >= 0 && p.first < t.size() && p.second >= 0 && p.second < t[0].size());
+      633:   16-block  0
+branch  0 taken 594 (fallthrough)
+branch  1 taken 39
+      594:   16-block  1
+call    2 returned 594
+branch  3 taken 564 (fallthrough)
+branch  4 taken 30
+      564:   16-block  2
+branch  5 taken 547 (fallthrough)
+branch  6 taken 17
+      547:   16-block  3
+call    7 returned 547
+call    8 returned 547
+branch  9 taken 498 (fallthrough)
+branch 10 taken 49
+      498:   16-block  4
+      135:   16-block  5
+      633:   16-block  6
+        -:   17:}
+        -:   18:
+function _Z7hayMinaSt4pairIiiERSt6vectorIS1_IbSaIbEESaIS3_EE called 496 returned 100% blocks executed 100%
+      496:   19:bool hayMina (pos p, tablero& t){
+      496:   20:    return (t[p.first][p.second]);
+      496:   20-block  0
+call    0 returned 496
+call    1 returned 496
+call    2 returned 496
+        -:   21:}
+        -:   22:
+function _Z15removerPosicionRSt6vectorISt4pairIiiESaIS1_EEi called 1 returned 100% blocks executed 86%
+        1:   23:void removerPosicion (banderitas &b, int index){
+        1:   24:    banderitas nuevoB{};
+        1:   24-block  0
+call    0 returned 1
+        5:   25:    for (int i = 0; i < b.size(); ++i) {
+        4:   25-block  0
+        5:   25-block  1
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   26:        if (i != index)
+        4:   26-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:   27:            nuevoB.push_back(b[i]);
+        3:   27-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   28:    }
+        1:   29:    b = nuevoB;
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30:}
+        1:   30-block  0
+call    0 returned 1
+    $$$$$:   30-block  1
+call    1 never executed
+        -:   31:
+function _Z22cantPosicionesSinMinasRSt6vectorIS_IbSaIbEESaIS1_EE called 2 returned 100% blocks executed 88%
+        2:   32:int cantPosicionesSinMinas(tablero& t) {
+        2:   33:    int cantSinMinas = 0;
+        2:   34:    int largoTablero = t.size();
+        2:   34-block  0
+call    0 returned 2
+       12:   35:    for (int i = 0; i < largoTablero; ++i) {
+       10:   35-block  0
+       12:   35-block  1
+branch  0 taken 10
+branch  1 taken 2 (fallthrough)
+       60:   36:        for (int j = 0; j < largoTablero; ++j) {
+       10:   36-block  0
+       50:   36-block  1
+       60:   36-block  2
+branch  0 taken 50
+branch  1 taken 10 (fallthrough)
+       50:   37:            pos p = make_pair(i, j);
+       50:   37-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+       50:   38:            if (!hayMina(p, t))
+       50:   38-block  0
+call    0 returned 50
+branch  1 taken 50 (fallthrough)
+branch  2 taken 0 (throw)
+       50:   38-block  1
+branch  3 taken 38 (fallthrough)
+branch  4 taken 12
+       38:   39:                cantSinMinas++;
+       38:   39-block  0
+        -:   40:        }
+        -:   41:    }
+        2:   42:    return cantSinMinas;
+        2:   42-block  0
+        2:   42-block  1
+        -:   43:}
+        -:   44:
+function _Z16esPosicionJugadaSt4pairIiiERSt6vectorIS_IS0_iESaIS2_EE called 84 returned 100% blocks executed 100%
+       84:   45:bool esPosicionJugada(pos p, jugadas& j) {
+       84:   46:    bool esJugada = false;
+      517:   47:    for (int i = 0; i < j.size(); ++i) {
+       84:   47-block  0
+      433:   47-block  1
+      517:   47-block  2
+call    0 returned 517
+branch  1 taken 433
+branch  2 taken 84 (fallthrough)
+      433:   48:        if(p == j[i].first)
+      433:   48-block  0
+call    0 returned 433
+call    1 returned 433
+branch  2 taken 48 (fallthrough)
+branch  3 taken 385
+       48:   49:            esJugada = true;
+       48:   49-block  0
+        -:   50:    }
+       84:   51:    return esJugada;
+       84:   51-block  0
+        -:   52:}
+        -:   53:
+function _Z20agregarJugadasNuevasSt4pairIiiEiRSt6vectorIS_IS0_iESaIS2_EE called 18 returned 100% blocks executed 100%
+       18:   54:void agregarJugadasNuevas(pos p, int minas, jugadas& j) {
+       18:   55:    if (not esPosicionJugada(p,j)) {
+       18:   55-block  0
+call    0 returned 18
+branch  1 taken 16 (fallthrough)
+branch  2 taken 2
+       16:   56:        jugada elem = make_pair(p, minas);
+       16:   56-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   57:        j.push_back(elem);
+       16:   57-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   58:    }
+       18:   59:}
+       18:   59-block  0
+        -:   60:
+function _Z14tieneBanderitaSt4pairIiiERSt6vectorIS0_SaIS0_EE called 47 returned 100% blocks executed 100%
+       47:   61:bool tieneBanderita(pos p, banderitas &b) {
+       47:   62:    bool existe = false;
+       59:   63:    for (int i = 0; i < b.size(); ++i) {
+       47:   63-block  0
+       12:   63-block  1
+       59:   63-block  2
+call    0 returned 59
+branch  1 taken 12
+branch  2 taken 47 (fallthrough)
+       12:   64:        if(b[i] == p)
+       12:   64-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 1 (fallthrough)
+branch  3 taken 11
+        1:   65:            existe = true;
+        1:   65-block  0
+        -:   66:    }
+       47:   67:    return existe;
+       47:   67-block  0
+        -:   68:}
+        -:   69:
+function _Z22existen1y1HorizontalesRSt6vectorISt4pairIS0_IiiEiESaIS2_EES1_RS_IS_IbSaIbEESaIS7_EE called 8 returned 100% blocks executed 94%
+        8:   70:bool existen1y1Horizontales(jugadas& j, pos posicionCon2,tablero &t) {
+        8:   71:    bool existen = false;
+        8:   72:    int cuentoUnos = 0;
+       32:   73:    for(int i = -1; i <= 1; i++){
+        8:   73-block  0
+       24:   73-block  1
+       32:   73-block  2
+branch  0 taken 24
+branch  1 taken 8 (fallthrough)
+       24:   74:        pos buscoUno = make_pair(posicionCon2.first,posicionCon2.second+i);
+       24:   74-block  0
+call    0 returned 24
+branch  1 taken 24 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   74-block  1
+       24:   75:        if(esPosicionJugada(buscoUno, j) && minasAdyacentes(t, buscoUno) == 1)
+       24:   75-block  0
+call    0 returned 24
+branch  1 taken 24 (fallthrough)
+branch  2 taken 0 (throw)
+       24:   75-block  1
+branch  3 taken 17 (fallthrough)
+branch  4 taken 7
+       17:   75-block  2
+call    5 returned 17
+branch  6 taken 17 (fallthrough)
+branch  7 taken 0 (throw)
+       17:   75-block  3
+branch  8 taken 9 (fallthrough)
+branch  9 taken 8
+        9:   75-block  4
+       15:   75-block  5
+       24:   75-block  6
+branch 10 taken 9 (fallthrough)
+branch 11 taken 15
+        9:   76:            cuentoUnos++;
+        9:   76-block  0
+        -:   77:    }
+        8:   78:    if(cuentoUnos == 2)
+        8:   78-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 4
+        4:   79:        existen = true;
+        4:   79-block  0
+        8:   80:    return existen;
+        8:   80-block  0
+        8:   80-block  1
+        -:   81:}
+        -:   82:
+function _Z20existen1y1VerticalesRSt6vectorISt4pairIS0_IiiEiESaIS2_EES1_RS_IS_IbSaIbEESaIS7_EE called 4 returned 100% blocks executed 94%
+        4:   83:bool existen1y1Verticales(jugadas& j, pos posicionCon2, tablero &t){
+        4:   84:    bool existen = false;
+        4:   85:    int cuentoUnos = 0;
+       16:   86:    for(int i = -1; i <= 1; i++){
+        4:   86-block  0
+       12:   86-block  1
+       16:   86-block  2
+branch  0 taken 12
+branch  1 taken 4 (fallthrough)
+       12:   87:        pos buscoUno = make_pair(posicionCon2.first+i,posicionCon2.second);
+       12:   87-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   87-block  1
+       12:   88:        if(esPosicionJugada(buscoUno, j) && minasAdyacentes(t, buscoUno) == 1)
+       12:   88-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   88-block  1
+branch  3 taken 11 (fallthrough)
+branch  4 taken 1
+       11:   88-block  2
+call    5 returned 11
+branch  6 taken 11 (fallthrough)
+branch  7 taken 0 (throw)
+       11:   88-block  3
+branch  8 taken 5 (fallthrough)
+branch  9 taken 6
+        5:   88-block  4
+        7:   88-block  5
+       12:   88-block  6
+branch 10 taken 5 (fallthrough)
+branch 11 taken 7
+        5:   89:            cuentoUnos++;
+        5:   89-block  0
+        -:   90:    }
+        4:   91:    if(cuentoUnos == 2)
+        4:   91-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   92:        existen = true;
+        2:   92-block  0
+        4:   93:    return existen;
+        4:   93-block  0
+        4:   93-block  1
+        -:   94:}
+        -:   95:
+function _Z18sugieroPHorizontalSt4pairIiiERSt6vectorIS1_IbSaIbEESaIS3_EERS1_IS_IS0_iESaIS7_EERS1_IS0_SaIS0_EERb called 4 returned 100% blocks executed 87%
+        4:   96:pos sugieroPHorizontal(pos pos2, tablero &t, jugadas &j, banderitas &b, bool &esSugerible){
+        4:   97:    pos superior = make_pair(pos2.first - 1, pos2.second);
+        4:   97-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   97-block  1
+        4:   98:    pos inferior = make_pair(pos2.first + 1, pos2.second);
+        4:   98-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   98-block  1
+        4:   99:    pos posSugerida{};
+        -:  100:
+        8:  101:    if (estaEnTablero(superior, t) && !esPosicionJugada(superior, j) && !tieneBanderita(superior, b)
+        4:  101-block  0
+call    0 returned 4
+        4:  101-block  1
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  101-block  2
+branch  4 taken 3 (fallthrough)
+branch  5 taken 1
+        3:  101-block  3
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:  101-block  4
+branch  9 taken 3 (fallthrough)
+branch 10 taken 0
+        8:  102:    && minasAdyacentes(t,superior) >= 2 && t[superior.first][superior.second - 1] &&t[superior.first][superior.second + 1]) {
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        3:  102-block  0
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:  102-block  1
+branch  5 taken 2 (fallthrough)
+branch  6 taken 1
+        2:  102-block  2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:  102-block  3
+call   11 returned 2
+branch 12 taken 2 (fallthrough)
+branch 13 taken 0
+        2:  102-block  4
+call   14 returned 2
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:  102-block  5
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0
+        2:  102-block  6
+        2:  102-block  7
+        4:  102-block  8
+branch 21 taken 2 (fallthrough)
+branch 22 taken 2
+    $$$$$:  102-block  9
+    $$$$$:  102-block 10
+        2:  103:        posSugerida = superior;
+        2:  103-block  0
+call    0 returned 2
+        2:  104:        esSugerible = true;
+        -:  105:    }
+        4:  106:    else if (estaEnTablero(inferior, t) && !esPosicionJugada(inferior, j) && !tieneBanderita(inferior, b)
+        2:  106-block  0
+call    0 returned 2
+        2:  106-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  106-block  2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:  106-block  3
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  106-block  4
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0
+       4*:  107:    && minasAdyacentes(t,inferior) >= 2 && t[inferior.first][inferior.second - 1] &&t[inferior.first][inferior.second + 1]) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  107-block  0
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  107-block  1
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0
+        2:  107-block  2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:  107-block  3
+call   11 returned 2
+branch 12 taken 2 (fallthrough)
+branch 13 taken 0
+        2:  107-block  4
+call   14 returned 2
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:  107-block  5
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0
+        2:  107-block  6
+    %%%%%:  107-block  7
+        2:  107-block  8
+branch 21 taken 2 (fallthrough)
+branch 22 taken 0
+    $$$$$:  107-block  9
+    $$$$$:  107-block 10
+        2:  108:        posSugerida = inferior;
+        2:  108-block  0
+call    0 returned 2
+        2:  109:        esSugerible = true;
+        -:  110:    }
+        -:  111:
+        4:  112:    return posSugerida;
+        4:  112-block  0
+        4:  112-block  1
+        -:  113:}
+        -:  114:
+function _Z16sugieroPVerticalSt4pairIiiERSt6vectorIS1_IbSaIbEESaIS3_EERS1_IS_IS0_iESaIS7_EERS1_IS0_SaIS0_EERb called 2 returned 100% blocks executed 87%
+        2:  115:pos sugieroPVertical(pos pos2, tablero &t, jugadas &j, banderitas &b, bool &esSugerible){
+        2:  116:    pos derecha = make_pair(pos2.first, pos2.second + 1);
+        2:  116-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  116-block  1
+        2:  117:    pos izquierda = make_pair(pos2.first, pos2.second - 1);
+        2:  117-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  117-block  1
+        2:  118:    pos posSugerida{};
+        -:  119:
+        4:  120:    if (estaEnTablero(derecha, t) && !esPosicionJugada(derecha, j) && !tieneBanderita(derecha, b)
+        2:  120-block  0
+call    0 returned 2
+        2:  120-block  1
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  120-block  2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:  120-block  3
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  120-block  4
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0
+        4:  121:    && minasAdyacentes(t,derecha) >= 2 && t[derecha.first+1][derecha.second] && t[derecha.first-1][derecha.second]) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  121-block  0
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:  121-block  1
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0
+        2:  121-block  2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:  121-block  3
+call   11 returned 2
+branch 12 taken 1 (fallthrough)
+branch 13 taken 1
+        1:  121-block  4
+call   14 returned 1
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  121-block  5
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  121-block  6
+        1:  121-block  7
+        2:  121-block  8
+branch 21 taken 1 (fallthrough)
+branch 22 taken 1
+    $$$$$:  121-block  9
+    $$$$$:  121-block 10
+        1:  122:        posSugerida = derecha;
+        1:  122-block  0
+call    0 returned 1
+        1:  123:        esSugerible = true;
+        -:  124:    }
+        -:  125:
+        2:  126:    else if (estaEnTablero(izquierda, t) && !esPosicionJugada(izquierda, j) && !tieneBanderita(izquierda, b)
+        1:  126-block  0
+call    0 returned 1
+        1:  126-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  126-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  126-block  3
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  126-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+       2*:  127:    && minasAdyacentes(t,izquierda) >= 2 && t[izquierda.first+1][izquierda.second] &&t[izquierda.first-1][izquierda.second]) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  127-block  0
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  127-block  1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:  127-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  127-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+        1:  127-block  4
+call   14 returned 1
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  127-block  5
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  127-block  6
+    %%%%%:  127-block  7
+        1:  127-block  8
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  127-block  9
+    $$$$$:  127-block 10
+        1:  128:        posSugerida = izquierda;
+        1:  128-block  0
+call    0 returned 1
+        1:  129:        esSugerible = true;
+        -:  130:    }
+        -:  131:
+        -:  132:
+        2:  133:    return posSugerida;
+        2:  133-block  0
+        2:  133-block  1
+        -:  134:}

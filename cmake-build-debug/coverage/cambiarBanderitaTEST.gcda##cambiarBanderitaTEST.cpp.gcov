@@ -1,0 +1,283 @@
+        -:    0:Source:C:/Users/nevil/Documents/GitHub/uba-algo1-TPs/TP2/ResolucionTP2/template-alumnos/tests/cambiarBanderitaTEST.cpp
+        -:    0:Graph:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.gcno
+        -:    0:Data:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\tests\cambiarBanderitaTEST.gcda
+        -:    0:Runs:1
+        -:    1:// Tests para la función cambiarBanderita.
+        -:    2:// Ver el archovo README.md para ayuda
+        -:    3:
+        -:    4:
+        -:    5:#include "../ejercicios.h"
+        -:    6:#include "../auxiliares.h"
+        -:    7:#include "gtest/gtest.h"
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+        2:   11:TEST (cambiarBanderitaTest, plantoBanderita){
+        2:   12:    tablero t(3, vector<bool>(3, false));
+        1:   13:    jugadas j = {};
+        1:   14:    banderitas b = {{0,1}, {2,1}, {1,0}};
+        -:   15:
+        1:   16:    banderitas plantoBanderita = {{0,1}, {2,1}, {1,0}, {1,2}};
+        -:   17:
+        1:   18:    cambiarBanderita(t,j,{1,2},b);
+       1*:   19:    ASSERT_EQ(b, plantoBanderita);
+        1:   20:}
+------------------
+_ZN41cambiarBanderitaTest_plantoBanderita_Test8TestBodyEv:
+function _ZN41cambiarBanderitaTest_plantoBanderita_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:   11:TEST (cambiarBanderitaTest, plantoBanderita){
+        2:   12:    tablero t(3, vector<bool>(3, false));
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   12-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+call    8 returned 1
+call    9 returned 1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+        1:   13:    jugadas j = {};
+call    0 returned 1
+        1:   14:    banderitas b = {{0,1}, {2,1}, {1,0}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   14-block  0
+    $$$$$:   14-block  1
+        -:   15:
+        1:   16:    banderitas plantoBanderita = {{0,1}, {2,1}, {1,0}, {1,2}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+        -:   17:
+        1:   18:    cambiarBanderita(t,j,{1,2},b);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   18-block  0
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+       1*:   19:    ASSERT_EQ(b, plantoBanderita);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   19-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   19-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   19-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   19-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   19-block  6
+call   18 never executed
+call   19 never executed
+        1:   19-block  7
+        1:   19-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   19-block  9
+call   23 never executed
+    $$$$$:   19-block 10
+    $$$$$:   19-block 11
+call   24 never executed
+    $$$$$:   19-block 12
+    $$$$$:   19-block 13
+call   25 never executed
+        1:   20:}
+        1:   20-block  0
+        1:   20-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   20-block  2
+        1:   20-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   20-block  4
+        1:   20-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   20-block  6
+        1:   20-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   20-block  8
+call   12 never executed
+    $$$$$:   20-block  9
+call   13 never executed
+    $$$$$:   20-block 10
+call   14 never executed
+    $$$$$:   20-block 11
+call   15 never executed
+------------------
+_ZN41cambiarBanderitaTest_plantoBanderita_TestC1Ev:
+function _ZN41cambiarBanderitaTest_plantoBanderita_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST (cambiarBanderitaTest, plantoBanderita){
+        1:   11-block  0
+call    0 returned 1
+------------------
+        -:   21:
+        2:   22:TEST (cambiarBanderitaTest, sacoBanderita){
+        2:   23:    tablero t(3, vector<bool>(3, false));
+        1:   24:    jugadas j = {};
+        1:   25:    banderitas b = {{0,1}, {2,1}, {1,0}, {1,2}};
+        -:   26:
+        1:   27:    banderitas sacoBanderita = {{0,1}, {1,0}, {1,2}};
+        -:   28:
+        1:   29:    cambiarBanderita(t,j,{2,1},b);
+       1*:   30:    ASSERT_EQ(b, sacoBanderita);
+        1:   31:}
+------------------
+_ZN39cambiarBanderitaTest_sacoBanderita_Test8TestBodyEv:
+function _ZN39cambiarBanderitaTest_sacoBanderita_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+        1:   22:TEST (cambiarBanderitaTest, sacoBanderita){
+        2:   23:    tablero t(3, vector<bool>(3, false));
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   23-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+call    8 returned 1
+call    9 returned 1
+    $$$$$:   23-block  2
+    $$$$$:   23-block  3
+    $$$$$:   23-block  4
+    $$$$$:   23-block  5
+        1:   24:    jugadas j = {};
+call    0 returned 1
+        1:   25:    banderitas b = {{0,1}, {2,1}, {1,0}, {1,2}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   25-block  0
+    $$$$$:   25-block  1
+        -:   26:
+        1:   27:    banderitas sacoBanderita = {{0,1}, {1,0}, {1,2}};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   27-block  0
+    $$$$$:   27-block  1
+        -:   28:
+        1:   29:    cambiarBanderita(t,j,{2,1},b);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   29-block  0
+    $$$$$:   29-block  1
+    $$$$$:   29-block  2
+       1*:   30:    ASSERT_EQ(b, sacoBanderita);
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   30-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   30-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   30-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   30-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   30-block  6
+call   18 never executed
+call   19 never executed
+        1:   30-block  7
+        1:   30-block  8
+call   20 returned 1
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:   30-block  9
+call   23 never executed
+    $$$$$:   30-block 10
+    $$$$$:   30-block 11
+call   24 never executed
+    $$$$$:   30-block 12
+    $$$$$:   30-block 13
+call   25 never executed
+        1:   31:}
+        1:   31-block  0
+        1:   31-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   31-block  2
+        1:   31-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:   31-block  4
+        1:   31-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   31-block  6
+        1:   31-block  7
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+    $$$$$:   31-block  8
+call   12 never executed
+    $$$$$:   31-block  9
+call   13 never executed
+    $$$$$:   31-block 10
+call   14 never executed
+    $$$$$:   31-block 11
+call   15 never executed
+------------------
+_ZN39cambiarBanderitaTest_sacoBanderita_TestC1Ev:
+function _ZN39cambiarBanderitaTest_sacoBanderita_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   22:TEST (cambiarBanderitaTest, sacoBanderita){
+        1:   22-block  0
+call    0 returned 1
+------------------

@@ -1,0 +1,383 @@
+        -:    0:Source:C:/Users/nevil/Documents/GitHub/uba-algo1-TPs/TP2/ResolucionTP2/template-alumnos/ejercicios.cpp
+        -:    0:Graph:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\ejercicios.gcno
+        -:    0:Data:C:\Users\nevil\Documents\GitHub\uba-algo1-TPs\TP2\ResolucionTP2\template-alumnos\cmake-build-debug\CMakeFiles\tpi.dir\ejercicios.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Este archivo contiene las definiciones de las funciones que implementan los ejercicios
+        -:    3://
+        -:    4:
+        -:    5:#include <stdio.h>
+        -:    6:#include <iostream>
+        -:    7:
+        -:    8:
+        -:    9:#include "definiciones.h"
+        -:   10:#include "ejercicios.h"
+        -:   11:#include "auxiliares.h"
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+        -:   15:/******++++**************************** EJERCICIO minasAdyacentes ***********+++***********************/
+        -:   16:
+        -:   17:/* Este algoritmo tiene complejidad O(1), porque independientemente del tamaño de la entrada
+        -:   18:   (el tamaño del tablero), en el peor caso (que tenga 8 casillas adyacentes)
+        -:   19:   va a realizar la misma cantidad de iteraciones.
+        -:   20:   Y lo mismo sucede con las funciones estaEnTablero y hayMina. */
+        -:   21:
+function _Z15minasAdyacentesRSt6vectorIS_IbSaIbEESaIS1_EESt4pairIiiE called 64 returned 100% blocks executed 91%
+       64:   22:int minasAdyacentes(tablero& t, pos p) {
+       64:   23:    int contadorMinas = 0;
+      256:   24:    for(int i = -1; i <= 1; i++){
+       64:   24-block  0
+      192:   24-block  1
+      256:   24-block  2
+branch  0 taken 192
+branch  1 taken 64 (fallthrough)
+      768:   25:        for(int j = -1; j <= 1; j++){
+      192:   25-block  0
+      576:   25-block  1
+      768:   25-block  2
+branch  0 taken 576
+branch  1 taken 192 (fallthrough)
+      576:   26:            pos celdaAdyacente = make_pair(p.first + i, p.second + j);
+      576:   26-block  0
+call    0 returned 576
+branch  1 taken 576 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+      962:   27:            if (estaEnTablero(celdaAdyacente, t) && (i != 0 || j != 0) &&
+      576:   27-block  0
+call    0 returned 576
+branch  1 taken 576 (fallthrough)
+branch  2 taken 0 (throw)
+      576:   27-block  1
+branch  3 taken 450 (fallthrough)
+branch  4 taken 126
+      450:   27-block  2
+branch  5 taken 170 (fallthrough)
+branch  6 taken 280
+      170:   27-block  3
+branch  7 taken 106 (fallthrough)
+branch  8 taken 64
+       81:   27-block  4
+      495:   27-block  5
+      576:   27-block  6
+branch  9 taken 81 (fallthrough)
+branch 10 taken 495
+      386:   28:            hayMina(celdaAdyacente, t))
+      386:   28-block  0
+call    0 returned 386
+branch  1 taken 386 (fallthrough)
+branch  2 taken 0 (throw)
+      386:   28-block  1
+branch  3 taken 81 (fallthrough)
+branch  4 taken 305
+       81:   29:                contadorMinas++;
+       81:   29-block  0
+        -:   30:        }
+        -:   31:    }
+       64:   32:    return contadorMinas;
+       64:   32-block  0
+       64:   32-block  1
+        -:   33:}
+        -:   34:
+        -:   35:/******++++**************************** EJERCICIO plantarBanderita ***********+++***********************/
+        -:   36:
+        -:   37:/* Este algoritmo tiene complejidoad O(l^2). La función removerPosición tiene complejidad O(l),
+        -:   38:   siendo l el largo de la secuencia de banderitas, ya que siempre va a realizar tantas
+        -:   39:   iteraciones como el tamaño de l. Luego, esta funcion es llamada dentro del ciclo
+        -:   40:   de cambiarBanderita, cuyas iteraciones tambien dependen de l (en el peor caso).
+        -:   41:   Por lo tanto, queda una complejidad de O(l) * O(l) = O(l^2). */
+        -:   42:
+function _Z16cambiarBanderitaRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EES6_RS_IS6_SaIS6_EE called 2 returned 100% blocks executed 100%
+        2:   43:void cambiarBanderita(tablero& t, jugadas& j, pos p, banderitas& b) {
+        2:   44:    int banderitasLargo = b.size();
+        2:   44-block  0
+call    0 returned 2
+        7:   45:    for (int i = 0; i < b.size() && b.size() == banderitasLargo; ++i) {
+        5:   45-block  0
+        7:   45-block  1
+call    0 returned 7
+branch  1 taken 6 (fallthrough)
+branch  2 taken 1
+        6:   45-block  2
+call    3 returned 6
+branch  4 taken 5 (fallthrough)
+branch  5 taken 1
+        5:   45-block  3
+        2:   45-block  4
+        7:   45-block  5
+branch  6 taken 5
+branch  7 taken 2 (fallthrough)
+        5:   46:        if (b[i] == p)
+        5:   46-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 1 (fallthrough)
+branch  3 taken 4
+        1:   47:            removerPosicion(b, i);
+        1:   47-block  0
+call    0 returned 1
+        -:   48:    }
+        2:   49:    if (banderitasLargo == b.size())
+        2:   49-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   50:        b.push_back(p);
+        1:   50-block  0
+call    0 returned 1
+        2:   51:}
+        -:   52:
+        -:   53:/******++++**************************** EJERCICIO perdio ***********+++***********************/
+        -:   54:
+        -:   55:/* Este algoritmo tiene una complejidad de O(n). De vuelta, la función hayMina no depende de n ni m,
+        -:   56:   y la cantidad de iteraciones que realiza va a ser igual al tamaño de n, siendo n el largo
+        -:   57:   de la secuencia de jugadas y m el largo del tablero. */
+        -:   58:
+function _Z6perdioRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 2 returned 100% blocks executed 100%
+        2:   59:bool perdio(tablero& t, jugadas& j) {
+        2:   60:    int cantidadMinas = 0;
+        6:   61:    for (int i = 0; i < j.size(); ++i) {
+        2:   61-block  0
+        4:   61-block  1
+        6:   61-block  2
+call    0 returned 6
+branch  1 taken 4
+branch  2 taken 2 (fallthrough)
+        4:   62:        if(hayMina((j[i].first), t))
+        4:   62-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 1 (fallthrough)
+branch  3 taken 3
+        1:   63:            cantidadMinas++;
+        1:   63-block  0
+        -:   64:    }
+        2:   65:    bool tieneMina = (cantidadMinas == 1);
+        2:   66:    return tieneMina;
+        2:   66-block  0
+        -:   67:}
+        -:   68:
+        -:   69:/******++++**************************** EJERCICIO gano ***********+++***********************/
+        -:   70:
+        -:   71:/* Este algoritmo tiene una complejidad de O(m^2). La funcion cantPosicionesSinMinas
+        -:   72:   tiene una complejidad de m^2, siendo m el tamaño del tablero. Por lo tanto, la función gano
+        -:   73:   tiene una complejidad de O(n), siendo n del largo de jugadas, + O(m^2), (sumadas, ya que
+        -:   74:   la segunda no se encuentra dentro del ciclo). Luego, O(n) + O(m^2) = O(n + m^2). Pero como n <= m^2 siempre,
+        -:   75:   podemos decir que O(n) + O(m^2) = O(m^2).*/
+        -:   76:
+function _Z4ganoRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIS5_IiiEiESaIS7_EE called 3 returned 100% blocks executed 100%
+        3:   77:bool gano(tablero& t, jugadas& j) {
+        3:   78:    int cantJugadasConMinas = 0;
+       59:   79:    for (int i = 0; i < j.size(); ++i) {
+        3:   79-block  0
+       56:   79-block  1
+       59:   79-block  2
+call    0 returned 59
+branch  1 taken 56
+branch  2 taken 3 (fallthrough)
+       56:   80:        if(hayMina((j[i].first), t)) {
+       56:   80-block  0
+call    0 returned 56
+call    1 returned 56
+branch  2 taken 1 (fallthrough)
+branch  3 taken 55
+        1:   81:            cantJugadasConMinas++;
+        1:   81-block  0
+        -:   82:        }
+        -:   83:    }
+        3:   84:    bool gano = false;
+        3:   85:    if(cantJugadasConMinas == 0 && j.size() == cantPosicionesSinMinas(t)) {
+        3:   85-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   85-block  1
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1
+        1:   85-block  2
+        2:   85-block  3
+        3:   85-block  4
+branch  6 taken 1 (fallthrough)
+branch  7 taken 2
+        1:   86:        gano = true;
+        1:   86-block  0
+        -:   87:    }
+        3:   88:    return gano;
+        3:   88-block  0
+        -:   89:}
+        -:   90:
+        -:   91:/******++++**************************** EJERCICIO jugarPlus ***********+++***********************/
+        -:   92:
+        -:   93:/* Este algoritmo tiene una complejidad de O(n * m^2). La complejidad de agregarJugadasNuevas es O(n),
+        -:   94:   ya que recorre t0do el largo de jugadas. Luego, el peor caso posible para esta función es tener
+        -:   95:   que recorrer todas las casillas del tablero (m^2), cuando ninguna esta jugada ni tiene minas adyacentes.
+        -:   96:   De esta manera, la complejidad es O(n) por todas las casillas = O(n*m^2) */
+        -:   97:
+function _Z9jugarPlusRSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EES6_RS_IS5_IS6_iESaISA_EE called 21 returned 100% blocks executed 94%
+       21:   98:void jugarPlus(tablero& t, banderitas& b, pos p, jugadas& j) {
+       21:   99:    if (!tieneBanderita(p, b) && estaEnTablero(p,t) && !esPosicionJugada(p,j)) {
+       21:   99-block  0
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0
+       21:   99-block  1
+call    3 returned 21
+branch  4 taken 21 (fallthrough)
+branch  5 taken 0
+       21:   99-block  2
+call    6 returned 21
+branch  7 taken 4 (fallthrough)
+branch  8 taken 17
+        4:   99-block  3
+       17:   99-block  4
+       21:   99-block  5
+branch  9 taken 4 (fallthrough)
+branch 10 taken 17
+        4:  100:        int minasAdy = minasAdyacentes(t, p);
+        4:  100-block  0
+call    0 returned 4
+        4:  101:        if (minasAdy >= 1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  102:            agregarJugadasNuevas(p, minasAdy, j);
+        1:  102-block  0
+call    0 returned 1
+        -:  103:        else {
+       12:  104:            for (int i = -1; i <= 1; ++i) {
+        3:  104-block  0
+        9:  104-block  1
+       12:  104-block  2
+branch  0 taken 9
+branch  1 taken 3 (fallthrough)
+       36:  105:                for (int k = -1; k <= 1; ++k) {
+        9:  105-block  0
+       27:  105-block  1
+       36:  105-block  2
+branch  0 taken 27
+branch  1 taken 9 (fallthrough)
+       27:  106:                    pos posAdy = make_pair(p.first + i, p.second + k);
+       27:  106-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  106-block  1
+    $$$$$:  106-block  2
+       27:  107:                    if (estaEnTablero(posAdy, t) && not tieneBanderita(posAdy, b)) {
+       27:  107-block  0
+call    0 returned 27
+branch  1 taken 27 (fallthrough)
+branch  2 taken 0 (throw)
+       27:  107-block  1
+branch  3 taken 18 (fallthrough)
+branch  4 taken 9
+       18:  107-block  2
+call    5 returned 18
+branch  6 taken 18 (fallthrough)
+branch  7 taken 0 (throw)
+       18:  107-block  3
+branch  8 taken 17 (fallthrough)
+branch  9 taken 1
+       17:  107-block  4
+       10:  107-block  5
+       27:  107-block  6
+branch 10 taken 17 (fallthrough)
+branch 11 taken 10
+       17:  108:                        agregarJugadasNuevas(posAdy, minasAdyacentes(t, posAdy), j);
+       17:  108-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+       17:  108-block  1
+call    3 returned 17
+branch  4 taken 17 (fallthrough)
+branch  5 taken 0 (throw)
+       17:  109:                        jugarPlus(t, b, posAdy, j);
+       17:  109-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  110:                    }
+        -:  111:                }
+        -:  112:            }
+        -:  113:        }
+        -:  114:    }
+       21:  115:}
+       21:  115-block  0
+        -:  116:
+        -:  117:
+        -:  118:/******++++**************************** EJERCICIO sugerirAutomatico121 ***********+++***********************/
+        -:  119:
+        -:  120:/* Este algoritmo tiene una complejidad de O(n^2), siendo n el largo de la secuencia de jugadas.
+        -:  121: * El ciclo tiene una complejidad de O(n). Luego, las funciones existen121 tienen ambas complejidad de O(n)
+        -:  122: * (por la función esPosicionJugada). Como estas funciones son ejecutadas dentro del ciclo mencionado, la
+        -:  123: * complejidad de sugerirAutomatico121 es O(n) * O(n) = O(n^2) */
+        -:  124:
+function _Z20sugerirAutomatico121RSt6vectorIS_IbSaIbEESaIS1_EERS_ISt4pairIiiESaIS6_EERS_IS5_IS6_iESaISA_EERS6_ called 7 returned 100% blocks executed 100%
+        7:  125:bool sugerirAutomatico121(tablero& t, banderitas& b, jugadas& j, pos& p) {
+        7:  126:    int largoJugadas = j.size();
+        7:  126-block  0
+call    0 returned 7
+        7:  127:    bool existe2 = false, hayPosSugerible = false;
+        7:  128:    int indice2 = 0;
+        -:  129:
+       31:  130:    for(int i = 0; i < largoJugadas && !hayPosSugerible; i++) {
+       24:  130-block  0
+       31:  130-block  1
+branch  0 taken 30 (fallthrough)
+branch  1 taken 1
+       30:  130-block  2
+branch  2 taken 24
+branch  3 taken 6 (fallthrough)
+       24:  131:        if(j[i].second == 2) {
+       24:  131-block  0
+call    0 returned 24
+branch  1 taken 8 (fallthrough)
+branch  2 taken 16
+        8:  132:            if(existen1y1Horizontales(j, j[i].first,t)){
+        8:  132-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:  132-block  1
+branch  4 taken 4 (fallthrough)
+branch  5 taken 4
+        4:  133:                hayPosSugerible = true;
+        4:  134:                p = sugieroPHorizontal(j[i].first, t, j, b, hayPosSugerible);
+        4:  134-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  134-block  1
+call    4 returned 4
+        -:  135:            }
+        4:  136:            else if(existen1y1Verticales(j, j[i].first,t)) {
+        4:  136-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  136-block  1
+branch  4 taken 2 (fallthrough)
+branch  5 taken 2
+        2:  137:                hayPosSugerible = true;
+        2:  138:                p = sugieroPVertical(j[i].first, t, j, b, hayPosSugerible);
+        2:  138-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  138-block  1
+call    4 returned 2
+        -:  139:            }
+        -:  140:        }
+        -:  141:    }
+        -:  142:
+        7:  143:    return hayPosSugerible;
+        7:  143-block  0
+        7:  143-block  1
+        -:  144:}
