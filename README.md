@@ -1,5 +1,5 @@
 # Minesweeper 💣💥  
-Starting from a group practice work for university in which we had to program the structural base of the minesweeper game, mainly coded with arrays (vectors) and matrices,
+Starting from a group practice work for university in which we had to program the structural base of the minesweeper game, mainly coded with arrays (vectors) and matrices, in C++, 
 I succeeded to program this simple graphic interface to play the game in the console, so anyone can give it a try. It was all coded in CLion IDE. The group members are mentioned at the bottom.
 
 ## Game working
