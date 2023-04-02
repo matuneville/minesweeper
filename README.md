@@ -1,6 +1,6 @@
 # Minesweeper 💣💥  
 Starting from a group [project](https://github.com/matuneville/uba-algo1-TPs) for university in which we had to program the structural base of the minesweeper game, mainly coded with arrays (vectors) and matrices, 
-I managed to program this simple graphical interface to play the game in the console, so that anyone can try it. Everithing is coded in C++ with CLion IDE. Group members are mentioned at the bottom.
+I managed to program this simple graphical interface to play the game in the console, so that anyone can try it. Everything is coded in C++ with CLion IDE. Group members are mentioned at the bottom.
 
 ## Game working
 At first, you need to select the size of the square board and the amount of bombs for the game, which will determine the difficulty of the match.  
